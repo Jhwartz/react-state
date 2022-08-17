@@ -1,64 +1,11 @@
-import React, {Component} from 'react'
-import { render } from 'react-dom';
+import React from 'react'
+import ProfileForm from './components/ProfileForm'
 import ProfileCard from './components/ProfileCard'
 
-class App extends Component {
-  constructor() {
-  supper();
-
-  this.handleClick=this.handleClick.Click.bind(this)
-
-  this.state = {
-    writers: {
-      loading:false,
-      list:[]
-    }
-  }
-
-  thishandleClick(){
-    this.setState({
-      writers:{
-        loading:true,
-      }
-    })
-
-setTimeout(async() => {
-  let resp =await("/writer.json");
-  let result =await resp.json()
-})
-
-    this.setState({
-      writers: {
-        loading: false,
-        list:result
-      }
-    })
-
-
-  }
-
-  }
-render(){
-  const{
-    writers: { loading, list }
-  } =this.state;
-}
-
-if(loading) {
+function App() {
   return (
-    <div>
-      <h1>writers profile</h1>
-      <div className='container'>
-        <div className='card action'>
-        <p className='infotext'> loading</p>
-       
-        </div>          
-     
-    </div>
-    </div>
+    <div></div>
   )
-  
-}
 }
 
 export default App
